@@ -24,7 +24,7 @@
         "build:contracts:EPSimulations08": "forge build --quiet --root contracts --evm-version cancun --out ../src/contracts/ src/v08/EntryPointSimulations.sol",
         "build:contracts:EPSimulations09": "forge build --quiet --root contracts --evm-version cancun --out ../src/contracts/ src/v09/EntryPointSimulations.sol",
         "build:contracts": "pnpm run build:contracts:PimlicoSimulations && pnpm run build:contracts:EPFilterOpsOverride06 && pnpm run build:contracts:EPFilterOpsOverride07 && pnpm run build:contracts:EPFilterOpsOverride08 && pnpm run build:contracts:EPFilterOpsOverride09 && pnpm run build:contracts:EPGasEstimationOverride06 && pnpm run build:contracts:EPSimulations07 && pnpm run build:contracts:EPSimulations08 && pnpm run build:contracts:EPSimulations09",
-        "start": "node src/esm/cli/alto.js run",
+        "start": "node src/esm/cli/alto.js run --config config.lisk.json",
         "dev": "pnpm run build:contracts && bun --watch src/cli/alto.ts run",
         "test": "pnpm --filter e2e run test",
         "test:ci": "pnpm run build:contracts && pnpm --filter e2e run test:ci",
